@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <title>[SK]rim</title>
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+        href="https://www.w3schools.com/w3css/4/w3.css">
+		<style type="text/css">
+			header, section, footer, aside, nav, article, figure, figcaption {
+				display: block;}
+			body {
+				color: #666666;
+				background-color: #f9f8f6;
+				background-image: url("images/dark-wood.jpg");
+				background-position: center;
+				font-family: Georgia, Times, serif;
+				line-height: 1.4em;
+				margin: 0px;}
+			.wrapper {
+				width: 940px;
+				margin: 20px auto 20px auto;
+				border: 2px solid #000000;
+				background-color: #ffffff;}
+			header {
+				height: 160px;
+				background-image: url(images/cropped-Header-Art-01.jpg);}
+			h1 {
+				text-indent: -9999px;
+				width: 940px;
+				height: 130px;
+				margin: 0px;}
+			nav, footer {
+				clear: both;
+				color: #ffffff;
+				background-color: #aeaca8;
+				height: 30px;}
+			nav ul {
+				margin: 0px;
+				padding: 5px 0px 5px 30px;}
+			nav li {
+				display: inline;
+				margin-right: 40px;}
+			nav li a {
+				color: #ffffff;}
+			nav li a:hover, nav li a.current {
+				color: #000000;}
+			section.courses {
+				float: left;
+				width: 659px;
+				border-right: 1px solid #eeeeee;}
+			article {
+				clear: both;
+				overflow: auto;
+				width: 100%;}
+			hgroup {
+				margin-top: 40px;}
+			figure {
+				float: left;
+				width: 290px;
+				height: 220px;
+				padding: 5px;
+				margin: 20px;
+				border: 1px solid #eeeeee;}
+			figcaption {
+				font-size: 90%;
+				text-align: left;}
+			aside {
+				width: 230px;
+				float: left;
+				padding: 0px 0px 0px 20px;}
+			aside section a {
+				display: block;
+				padding: 10px;
+				border-bottom: 1px solid #eeeeee;}
+			aside section a:hover {
+				color: #985d6a;
+				background-color: #efefef;}
+			a {
+				color: #de6581;
+				text-decoration: none;}
+			h1, h2, h3 {
+				font-weight: normal;}
+			h2 {
+				margin: 10px 0px 5px 0px;
+				padding: 0px;}
+			h3 {
+				margin: 0px 0px 10px 0px;
+				color: #de6581;}
+			aside h2 {
+				padding: 30px 0px 10px 0px;
+				color: #de6581;}
+			footer {
+				font-size: 80%;
+				padding: 7px 0px 0px 20px;}
+				
+				
+				 /*==Custom Widget Contact form WhatsApp By Codepelajar.com ==*/
+div#pelajar {
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+z-index: -99;
+opacity: 0;
+transition:.5s;
+background: rgba(0,0,0,0.5);
+}
+div#pelajar.active{
+z-index: 9999;
+opacity: 1;
+}
+div#whatsapp {
+position: fixed;
+top: 50%;
+left: 50%;
+max-width: 480px;
+width: 95%;
+background: #fff;
+transform: translate(-50%,-50%);
+z-index: -1;
+opacity: 0;
+border-radius: 5px;
+overflow: hidden;
+box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+transition:.5s;
+}
+div#whatsapp.active {
+z-index: 999999;
+opacity: 1;
+}
+p.wa-title {
+margin: 0;
+padding: 15px;
+font-size: 16px;
+text-align: center;
+font-weight: bold;
+background: #2ecc71;
+color: #fff;
+}
+.wa-body {
+padding: 14px;
+display: flex;
+flex-wrap: wrap;
+width: 100%;
+box-sizing: border-box;
+}
+.wa-input {
+border: 1px solid #ddd;
+border-radius: 3px;
+line-height: 32px;
+padding: 0 10px;
+box-shadow: inset 0 0 2px rgba(0,0,0,0.1);
+}
+.wa-input.bagi {
+width: 48%;
+margin: 1%;
+margin-bottom: 10px;
+}
+.wa-input.full {
+width: 98%;
+resize: none;
+min-height: 150px;
+margin: 0 1%;
+}
+a.submit {
+line-height: 24px;
+padding: 10px 15px;
+width: 100%;
+max-width: 200px;
+text-align: center;
+background: #2ecc71;
+margin: 14px auto 0 auto;
+display: block;
+color: #fff;
+border-radius: 3px;
+cursor: pointer;
+}
+span.wa-x {
+position: absolute;
+top: 5px;
+right: 5px;
+height: 30px;
+width: 30px;
+/* background: #222; */
+border: 2px solid #fff;
+border-radius: 50px;
+corsor:pointer;
+}
+a#wa-icon {
+position: fixed;
+bottom: 30px;
+left: 30px;
+line-height: 0;
+border-radius: 30px;
+background: #2ecc71;
+padding: 0;
+height: 60px;
+width: 60px;
+color: #fff;
+box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+/* filter: invert(100%); */
+z-index:99;
+}
+a#wa-icon::before {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+}
+span.wa-x::before {
+content: "";
+position: absolute;
+top: 50%;
+left: 50%;
+height: 3px;
+width: 50%;
+background: #fff;
+transform: translate(-50%,-50%);
+}
+@media (max-width: 480px){
+.wa-input.bagi {
+width: 100%;
+margin: 0;
+margin-bottom: 10px;
+}
+a#wa-icon {bottom:10px;left:10px;}
+.wa-input.full {
+width: 100%;
+margin: 0;
+}
+}
+		</style>
+		<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<div class="wrapper">
+			<header>
+				<h1>[SK]rim</h1>
+				<nav>
+					<ul>
+						<li><a href="index.html" class="current">beranda</a></li>
+						<li><a href="daftarmenu.html">daftar menu</a></li>
+						<li><a href="pemesanan.html">pemesanan</a></li>
+						<li><a href="tentang.html">tentang</a></li>
+						<li><a href="kontak.html">kontak</a></li>
+					</ul>
+				</nav>
+			</header>
+			<section class="courses">
+			
+		 <a class='fa fa-whatsapp fa-3x animated infinite rubberBand' href='javascript:void(0);' id='wa-icon' onclick='openModal()'></a>
+<div class='pelajar' id='pelajar'>
+</div>
+<div id='whatsapp'>
+<span class='wa-x' onclick='closeModal()'></span>
+<p class='wa-title'>Contact Form</p>
+<div class='wa-body'>
+<input class='tujuan' type='hidden' value='0895334904784'/>
+<!-- No. WhatsApp -->
+<input class='nama wa-input bagi' placeholder='Nama Lengkap..' type='text'/>
+<input class='email wa-input bagi' placeholder='Alamat E-mail..' type='email'/>
+<textarea class='pesan wa-input full' placeholder='Pesan..'></textarea>
+<a class='submit'>Kirim</a>
+</div>
+</div>
+		
+				
+			</section>
+			<aside>
+				<section class="popular-recipes">
+					<h2>Masakan Populer</h2>
+					<a href="">[Sk]rim cone</a>
+					<a href="">[Sk]rim Gelato</a>
+					<a href="">[Sk]rim Granita</a>
+					<a href="">[Sk]rim Rool</a>
+				</section>
+				<section class="contact-details">
+					<h2>Kontak</h2>
+					<p>[SK]rim<br />
+						di seluruh Semarang tapi warung saya cuma 1
+				</section>
+			</aside>
+			<footer>
+				&copy; AmaulanaS
+			</footer>
+		</div><!-- .wrapper -->
+		
+	
+		 <script type='text/javascript'>
+function closeModal() {
+document.getElementById('pelajar').classList.remove('active')
+document.getElementById('whatsapp').classList.remove('active')
+}
+function openModal() {
+document.getElementById('pelajar').classList.add('active')
+document.getElementById('whatsapp').classList.add('active')
+}
+
+
+// Onclick Whatsapp Sent!
+$('#whatsapp .submit').click(WhatsApp);
+
+
+var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+function WhatsApp() {
+    var ph = '';
+    if ($('#whatsapp .nama').val() == '') { // Cek Nama
+        ph = $('#whatsapp .nama').attr('placeholder');
+        alert('Silahkan tulis ' + ph);
+        $('#whatsapp .nama').focus();
+        return false;
+    } else if ($('#whatsapp .email').val() == '') { // Cek Email
+        ph = $('#whatsapp .email').attr('placeholder');
+        alert('Silahkan tulis ' + ph);
+        $('#whatsapp .email').focus();
+        return false;
+    } else if (reg.test($('#whatsapp .email').val()) == false) { // Cek Validasi Email
+        alert('Alamat E-mail tidak valid.');
+        $('#whatsapp .email').focus();
+         return false;
+    } else if ($('#whatsapp .pesan').val() == '') { // Cek Pesan
+        ph = $('#whatsapp .pesan').attr('placeholder');
+        alert('Silahkan tulis ' + ph);
+        $('#whatsapp .pesan').focus();
+        return false;
+    } else {
+        if (!confirm("Sudah menginstall WhatsApp?")) {
+            window.open("https://www.whatsapp.com/download/");
+        } else {
+            // Check Device (Mobile/Desktop)
+            var url_wa = 'https://web.whatsapp.com/send';
+            if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+                url_wa = 'whatsapp://send/';
+            }
+            // Get Value
+            var tujuan = $('#whatsapp .tujuan').val(),
+                    via_url = location.href,
+                    nama = $('#whatsapp .nama').val(),
+                    email = $('#whatsapp .email').val(),
+                    pesan = $('#whatsapp .pesan').val();
+            $(this).attr('href', url_wa + '?phone=62 ' + tujuan + '&text=Halo, saya *' + nama + '* (' + email + ').. %0A%0A' + pesan + '%0A%0Avia ' + via_url);
+            var w = 960,
+                    h = 540,
+                    left = Number((screen.width / 2) - (w / 2)),
+                    tops = Number((screen.height / 2) - (h / 2)),
+                    popupWindow = window.open(this.href, '', 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=1, copyhistory=no, width=' + w + ', height=' + h + ', top=' + tops + ', left=' + left);
+            popupWindow.focus();
+            return false;
+        }
+    }
+}
+</script>
+	</body>
+</html>
